@@ -35,18 +35,17 @@ If anything crashes while Curva is on, the next launch offers to put your real p
 
 ## Profiles
 
-You can save multiple profiles per pedal device and switch between them with a click. Profiles are JSON files in `%APPDATA%\Curva\`, so backing them up is just copying that folder.
+You can save multiple profiles per pedal device and switch between them with a click. Profiles are JSON files in `%APPDATA%\PedalCurve\Profiles\`, so backing them up is just copying that folder.
 
 ## Install
 
-Download the installer from the release page and run it.
+Curva needs two open-source Windows drivers to work. Install them first, then install Curva.
 
-The installer checks whether the two drivers Curva needs are already on your machine, and only installs the ones that are missing:
+1. HidHide by Nefarius Software Solutions. Hides your real pedal device from games while Curva is on. Get the latest `*_x64.msi` from [github.com/nefarius/HidHide/releases](https://github.com/nefarius/HidHide/releases).
+2. vJoy Revived by njz3 (fork of the original by Shaul Eizikovich). Exposes the curved output as a virtual joystick. Get the latest `vJoySetup-*.msi` from [github.com/njz3/vJoy/releases](https://github.com/njz3/vJoy/releases).
+3. Curva. Download `CurvaApp.msi` from the release page above and run it.
 
-- HidHide by Nefarius Software Solutions. Hides your real pedal device from games while Curva is on.
-- vJoy Revived by njz3. Exposes the curved output as a virtual joystick.
-
-Both are open source. Curva does not bundle them as redistributables. It chains the installers from the upstream projects.
+Both drivers are MIT licensed. A future Curva release will bundle a single bootstrapper that chains all three.
 
 ## Requirements
 
@@ -54,16 +53,16 @@ Windows 10 21H2 or later, 64-bit. A USB pedal set that shows up as a standard HI
 
 ## Quick start
 
-1. Run the installer. Accept the driver installs if prompted.
+1. Install the drivers and Curva as listed above.
 2. Open Curva.
-3. On the Devices tab, pick your pedals and run the setup wizard so Curva learns which axis is which.
-4. Switch to the Configure tab and shape the curves. Right-click a segment to toggle it between Linear and Smooth.
+3. On the Virtual Devices tab, hit the orange "+" to pick your pedals and run the setup wizard so Curva learns which axis is which.
+4. Switch to the Configure tab and shape the curves. Right-click a point for more options.
 5. Hit Start at the bottom.
 6. Map the virtual joystick axes in your game. They show up as "vJoy Device" on the standard joystick screen.
 
 ## Privacy
 
-No network requests. Profiles and settings live in `%APPDATA%\Curva\`.
+No network requests. Profiles and settings live in `%APPDATA%\PedalCurve\`.
 
 ## Source
 
